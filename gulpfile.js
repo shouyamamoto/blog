@@ -27,7 +27,7 @@ const { src, dest, watch } = require('gulp');
 
 // sassコンパイル
 function cssTask() {
-    return src('./src/sass/**', {sourcemaps: true})
+    return src('./src/sass/**/**', {sourcemaps: true})
         .pipe(sassGlob())
         .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
         .pipe(autoprefixer({cascade: false}))
